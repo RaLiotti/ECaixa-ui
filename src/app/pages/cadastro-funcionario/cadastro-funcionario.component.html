@@ -1,0 +1,25 @@
+<div class="grid card-cadastro-funcionario">
+    <h2 class="titulo">Cadastro de Funcionário</h2>
+   <form class="formulario-cadastro" [formGroup]="form" (ngSubmit)="mostrar()">
+        <div class="col-12">
+            <div class="p-fluid">
+                <div class="field">
+                    <label>Nome</label>
+                    <input id="nome" formControlName="nome" type="text" aria-describedby="nome-help" pInputText>   
+                    <small *ngIf="form.value.nome == null || form.value.nome == ''" id="nome-help" class="p-error">Username is not available.</small>
+                </div>
+                <div class="p-field">
+                    <label>E-mail</label>
+                    <input id="email" formControlName="email" type="text" pInputText>
+                </div>
+                <div class="p-field">
+                    <label>CPF</label>
+                    <p-inputMask id="cpf" formControlName="cpf" mask="999.999.999-99"></p-inputMask>
+                </div>
+            </div>
+            <div class="p-fluid btn-cadastrar">
+                <p-button class="p-field btn-cadastrar" label="Cadastrar" type="submit"></p-button>
+            </div>
+        </div>
+    </form>
+</div>
