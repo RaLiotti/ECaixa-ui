@@ -1,0 +1,61 @@
+.div-cadastro-funcionario{
+    padding: 1em;
+    margin: 0 0em;
+    width: 100%;
+    border-radius: 0.5em;
+    border: 1px solid rgb(0, 0, 0, 0.5);
+    display: flex;
+}
+
+.card-cadastro-funcionario{
+    margin-left: 2em;
+    width: 21em;
+}
+
+.divider{
+    margin-left: 5em;
+    margin-right: 5em;
+    border: 3 solid #000;
+    margin-top: 2em;
+    height: 18em;
+}
+
+.titulo{
+    text-align: center;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+}
+
+.btn-cadastrar{
+    margin-top: 1em;
+    margin-left: 1em;
+    
+}
+
+.card-cadastro-funcionario .p-field{
+    margin-top: 1em;
+}
+
+.formulario-cadastro{
+    margin: 10 auto;
+}
+
+.tabela-funcionario{
+    border-radius: 3px;
+    border: 1px solid rgb(0, 0, 0, 0.5);
+    margin: 24px auto;
+    width: 100%;
+}
+
+.carregar{
+    text-align: center;
+}
+
+.btn-carregar{
+    text-align: center;
+    margin: 2em 0;
+}
+
+.tabela-funionario-titulo{
+    text-align: center;
+}

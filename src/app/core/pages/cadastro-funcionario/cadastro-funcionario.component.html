@@ -1,0 +1,99 @@
+<div class="grid div-cadastro-funcionario">
+
+    <h2 class="titulo col-12">Cadastro de Funcionário</h2>
+
+
+    <div class="col-6 grid">
+        <div class="card-cadastro-funcionario">
+            <form class="formulario-cadastro" [formGroup]="form">
+                <div class="col-12">
+                    <div class="p-fluid">
+                        <div class="field">
+                            <label>Nome</label>
+                            <input id="nome" formControlName="nome" type="text" pInputText>
+                        </div>
+                        <div class="p-field">
+                            <label>E-mail</label>
+                            <input id="email" formControlName="email" type="text" pInputText>
+                        </div>
+                        <div class="p-field">
+                            <label>CPF</label>
+                            <p-inputMask id="cpf" formControlName="cpf" mask="999.999.999-99"></p-inputMask>
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+
+        <div class="card-cadastro-funcionario">
+            <form class="formulario-cadastro" [formGroup]="form">
+                <div class="col-12">
+                    <div class="p-fluid">
+                        <div class="field">
+                            <label>CEP</label>
+                            <p-inputMask id="cep" formControlName="cep" type="CEP" mask="99999-999"></p-inputMask>
+                        </div>
+                        <div class="p-field">
+                            <label>Rua / Avenida</label>
+                            <input id="rua" formControlName="rua" type="text" pInputText>
+                        </div>
+                        <div class="p-field">
+                            <label>Numero</label>
+                            <input id="numero" formControlName="numero" type="text" pInputText>
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+
+        </div>
+        <div class="p-fluid btn-cadastrar col-3">
+            <p-button class="p-field btn-cadastrar" label="Cadastrar" (click)="cadastrarFuncionario()"></p-button>
+        </div>
+    </div>
+
+    <div>
+        <hr class="divider">
+    </div>
+
+    <div class="">
+        <h2 class="titulo">Teste</h2>
+    </div>
+
+</div>
+
+<div class="tabela-funcionario">
+
+    <div class="carregar" *ngIf="exibir_carregar">
+        <p-progressSpinner styleClass="custom-spinner" strokeWidth="8" fill="#EEEEEE" animationDuration=".5s">
+        </p-progressSpinner>
+    </div>
+
+    <div class="btn-carregar">
+        <p>API nao retornou dados, recarregue novamente</p>
+        <button pButton type="button" label="Recarregar" (click)="carregarFuncionarios()"></button>
+    </div>
+
+    <p-table [value]="funcionarios" [scrollable]="true" scrollHeight="50em">
+        <ng-template pTemplate="caption">
+            <h2 class="tabela-funionario-titulo">{{'Funcionarios cadastrados'}}</h2>
+        </ng-template>
+
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Nome</th>
+                <th>E-mail</th>
+                <th>CPF</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-funcionario>
+            <tr>
+                <td>{{funcionario.nome}}</td>
+                <td mask="99-9999">{{funcionario.email}}</td>
+                <td>{{funcionario.cpf}}</td>
+            </tr>
+        </ng-template>
+    </p-table>
+
+</div>

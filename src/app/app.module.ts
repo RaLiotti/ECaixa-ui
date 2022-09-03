@@ -8,10 +8,13 @@ import { CardModule } from 'primeng/card';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { InputMaskModule } from 'primeng/inputmask';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { TableModule } from 'primeng/table';
+import { ProgressSpinnerModule } from 'primeng/progressspinner';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CadastroFuncionarioComponent } from './pages/cadastro-funcionario/cadastro-funcionario.component';
+import { CadastroFuncionarioComponent } from './core/pages/cadastro-funcionario/cadastro-funcionario.component';
 
 
 @NgModule({
@@ -30,7 +33,10 @@ import { CadastroFuncionarioComponent } from './pages/cadastro-funcionario/cadas
     InputNumberModule,
     InputMaskModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    TableModule,
+    ProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
