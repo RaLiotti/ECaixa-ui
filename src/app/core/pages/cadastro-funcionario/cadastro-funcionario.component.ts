@@ -33,7 +33,10 @@ export class CadastroFuncionarioComponent implements OnInit {
   form = new FormGroup({
     nome: new FormControl(),
     email: new FormControl(),
-    cpf: new FormControl()
+    cpf: new FormControl(),
+    cep: new FormControl(),
+    numero: new FormControl(),
+    rua: new FormControl(),
   });
 
   cadastrarFuncionario() {
@@ -42,7 +45,7 @@ export class CadastroFuncionarioComponent implements OnInit {
     this.funcionario.email = this.form.value.email;
     this.funcionario.cpf = this.form.value.cpf;
 
-    debugger;
+   // debugger;
     console.log(this.funcionario);
 
     this.funcionarioService.setCadastrarFuncionario(this.funcionario).subscribe(

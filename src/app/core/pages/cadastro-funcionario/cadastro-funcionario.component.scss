@@ -1,7 +1,7 @@
 .div-cadastro-funcionario{
     padding: 1em;
-    margin: 0 9em;
-    width: 100em;
+    margin: 0 0em;
+    width: 100%;
     border-radius: 0.5em;
     border: 1px solid rgb(0, 0, 0, 0.5);
     display: flex;
@@ -28,7 +28,7 @@
 
 .btn-cadastrar{
     margin-top: 1em;
-    margin-left: auto;
+    margin-left: 1em;
     
 }
 
@@ -44,7 +44,7 @@
     border-radius: 3px;
     border: 1px solid rgb(0, 0, 0, 0.5);
     margin: 24px auto;
-    width: 100em;
+    width: 100%;
 }
 
 .carregar{
@@ -54,4 +54,8 @@
 .btn-carregar{
     text-align: center;
     margin: 2em 0;
+}
+
+.tabela-funionario-titulo{
+    text-align: center;
 }

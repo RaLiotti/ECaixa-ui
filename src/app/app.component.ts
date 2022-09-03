@@ -27,7 +27,7 @@ export class AppComponent implements OnInit {
 
   }
 
-  click(){
+  /* click(){
 
     this.funcionario.cpf = (this.funcionario.cpf / 2) + 100 ;
 
@@ -38,7 +38,7 @@ export class AppComponent implements OnInit {
 
     //this.teste.funcionarios.unshift(this.funcionario);
 
-  }
+  } */
 
 
 

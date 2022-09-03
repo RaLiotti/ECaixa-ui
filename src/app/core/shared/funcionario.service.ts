@@ -25,12 +25,13 @@ constructor(private httpClient: HttpClient) { }
 
 
 public getListarFuncionarios(): Observable<Funcionario[]>{
+  debugger;
   return this.httpClient.get<Funcionario[]>(this.funcionarios);
 }
 
 public setCadastrarFuncionario(funcionario: Funcionario){
 
-  debugger;
+ debugger;
   return this.httpClient.post(this.cadastrarFuncionario, funcionario);
 
 }
