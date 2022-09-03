@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { UntypedFormControl, UntypedFormGroup } from '@angular/forms';
 import { Funcionario } from 'src/app/core/domain/funcionario';
 import { FuncionarioService } from '../../shared/funcionario.service';
 
@@ -30,13 +30,13 @@ export class CadastroFuncionarioComponent implements OnInit {
     
   }
 
-  form = new FormGroup({
-    nome: new FormControl(),
-    email: new FormControl(),
-    cpf: new FormControl(),
-    cep: new FormControl(),
-    numero: new FormControl(),
-    rua: new FormControl(),
+  form = new UntypedFormGroup({
+    nome: new UntypedFormControl(),
+    email: new UntypedFormControl(),
+    cpf: new UntypedFormControl(),
+    cep: new UntypedFormControl(),
+    numero: new UntypedFormControl(),
+    rua: new UntypedFormControl(),
   });
 
   cadastrarFuncionario() {
